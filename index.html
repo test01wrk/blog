@@ -144,6 +144,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rdstory.com/p/hack-unity3d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RD Story">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/hack-unity3d/" class="post-title-link" itemprop="url">Hack an Unity3D game</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-12 01:08:35 / 修改时间：01:24:10" itemprop="dateCreated datePublished" datetime="2023-11-12T01:08:35+08:00">2023-11-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>This article shares the tools and steps needed to hack an Unity3D game.</p>
+<p>Tools:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Perfare/Il2CppDumper">https://github.com/Perfare/Il2CppDumper</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dnSpyEx/dnSpy">https://github.com/dnSpyEx/dnSpy</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/frida/frida">https://github.com/frida/frida</a></li>
+<li>IDA Pro</li>
+<li>Hex editor</li>
+<li><a target="_blank" rel="noopener" href="https://armconverter.com/">https://armconverter.com/</a></li>
+</ul>
+<p>Steps:</p>
+<ul>
+<li>Extract <code>libil2cpp.so</code> and <code>global-metadata.dat</code> from the game apk file</li>
+<li>Use Il2CppDumper to get dumped <code>dump.cs</code> and dlls</li>
+<li>Use dnSpy to view the dumped code (Class structures and address), find the target method to hack</li>
+<li>Use frida to verify if the target method can be hacked</li>
+<li>Open <code>libil2cpp.so</code> with IDA Pro and goto the target method address, create funtion, find the instructions to be patched</li>
+<li>Use <code>armconverter</code> to convert instructions to hex code</li>
+<li>Use hex editor to apply the patch to <code>libil2cpp.so</code></li>
+<li>Replace <code>libil2cpp.so</code> in the game apk file with pathed one, repack &amp; and &amp; install</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://rdstory.com/p/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -175,7 +254,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-18 00:51:57" itemprop="dateModified" datetime="2023-10-18T00:51:57+08:00">2023-10-18</time>
+                <time title="修改时间：2023-11-12 01:24:10" itemprop="dateModified" datetime="2023-11-12T01:24:10+08:00">2023-11-12</time>
               </span>
 
           
@@ -252,7 +331,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-18 00:51:57" itemprop="dateModified" datetime="2023-10-18T00:51:57+08:00">2023-10-18</time>
+                <time title="修改时间：2023-11-12 01:24:10" itemprop="dateModified" datetime="2023-11-12T01:24:10+08:00">2023-11-12</time>
               </span>
 
           
@@ -349,7 +428,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
